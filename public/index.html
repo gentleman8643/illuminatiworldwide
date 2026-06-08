@@ -3,158 +3,188 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Cinematic Portal</title>
+<title>Official Portal</title>
 
 <style>
-/* ===== BASE ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: black;
-  color: gold;
-  overflow: hidden;
+  background: radial-gradient(circle at top, #111, #000);
+  color: #d4af37;
+  scroll-behavior: smooth;
 }
 
-/* ===== LOADING SCREEN ===== */
-#loader {
+/* NAVBAR */
+nav {
   position: fixed;
+  top: 0;
   width: 100%;
-  height: 100%;
-  background: black;
+  background: rgba(0,0,0,0.8);
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 999;
+  gap: 25px;
+  padding: 15px;
+  z-index: 1000;
 }
 
-.loader-text {
-  font-size: 1.5rem;
-  letter-spacing: 3px;
-  animation: fade 2s infinite;
-}
-
-@keyframes fade {
-  0%,100% {opacity: 0.2;}
-  50% {opacity: 1;}
-}
-
-/* ===== BACKGROUND GLOW ===== */
-.glow {
-  position: fixed;
-  width: 600px;
-  height: 600px;
-  background: gold;
-  filter: blur(200px);
-  opacity: 0.12;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: float 6s infinite ease-in-out;
-}
-
-@keyframes float {
-  0%,100% {transform: translate(-50%, -50%) translateY(0);}
-  50% {transform: translate(-50%, -50%) translateY(-40px);}
-}
-
-/* ===== MAIN CONTENT ===== */
-#content {
-  display: none;
-  height: 100vh;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-h1 {
-  font-size: 3rem;
-  letter-spacing: 6px;
-  margin-top: 60px;
-}
-
-p {
-  max-width: 600px;
-  margin: 20px auto;
-  opacity: 0.8;
-}
-
-/* ===== BUTTONS ===== */
-.btn {
-  display: block;
-  margin: 12px auto;
-  padding: 12px 25px;
-  border: 1px solid gold;
-  color: gold;
+nav a {
+  color: #d4af37;
   text-decoration: none;
-  width: 220px;
-  border-radius: 8px;
+  font-size: 14px;
   transition: 0.3s;
 }
 
+nav a:hover {
+  color: white;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 6px;
+}
+
+.hero p {
+  max-width: 600px;
+  opacity: 0.8;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  text-decoration: none;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+
 .btn:hover {
-  background: gold;
+  background: #d4af37;
   color: black;
-  transform: scale(1.05);
 }
 
-/* ===== FADE IN ===== */
-.fade-in {
-  animation: appear 2s ease forwards;
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
 }
 
-@keyframes appear {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
+.card {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255,255,255,0.03);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(212,175,55,0.3);
+}
+
+/* GLow */
+.glow {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: gold;
+  filter: blur(200px);
+  opacity: 0.1;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.5;
 }
 </style>
 </head>
 
 <body>
 
-<!-- LOADING SCREEN -->
-<div id="loader">
-  <div class="loader-text">ENTERING PORTAL...</div>
-</div>
-
 <div class="glow"></div>
 
-<!-- MAIN CONTENT -->
-<div id="content">
+<!-- NAV -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#mission">Mission</a>
+  <a href="#join">Join</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <h1 class="fade-in">CINEMATIC PORTAL</h1>
+<!-- HERO -->
+<section id="home" class="hero">
+  <h1>OFFICIAL PORTAL</h1>
+  <p>A cinematic digital experience of structure, symbolism, and modern identity.</p>
+  <a class="btn" href="#join">Enter</a>
+</section>
 
-  <p class="fade-in">
-    A symbolic digital experience of knowledge, mystery, and immersive design.
-  </p>
+<!-- ABOUT -->
+<section id="about">
+  <div class="card">
+    <h2>About</h2>
+    <p>
+      This platform represents a structured digital identity system designed
+      for premium online presence, storytelling, and brand experience.
+    </p>
+  </div>
+</section>
 
-  <!-- BUTTONS -->
-  <a class="btn fade-in"
-     href="https://wa.me/12139420224?text=Hello%20I%20want%20to%20join%20the%20Illuminati"
-     target="_blank">
-     Join Portal
-  </a>
+<!-- MISSION -->
+<section id="mission">
+  <div class="card">
+    <h2>Mission</h2>
+    <p>
+      To create a cinematic and immersive digital environment combining modern design,
+      storytelling, and interactive user experience.
+    </p>
+  </div>
+</section>
 
-  <a class="btn fade-in"
-     href="https://wa.me/12139420224?text=Hello%20I%20need%20more%20information"
-     target="_blank">
-     Contact Support
-  </a>
+<!-- JOIN -->
+<section id="join">
+  <div class="card">
+    <h2>Join Access</h2>
+    <p>Connect via WhatsApp to request access.</p>
 
-  <a class="btn fade-in"
-     href="https://wa.me/12139420224?text=Hello%20I%20want%20VIP%20access"
-     target="_blank">
-     VIP Access
-  </a>
+    <a class="btn"
+       href="https://wa.me/12139420224?text=Hello%20I%20want%20to%20join%20the%20platform"
+       target="_blank">
+       Request Access
+    </a>
+  </div>
+</section>
 
-</div>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Direct communication channel available below.</p>
 
-<!-- SCRIPT -->
-<script>
-setTimeout(() => {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("content").style.display = "block";
-}, 2500);
-</script>
+    <a class="btn"
+       href="https://wa.me/12139420224?text=Hello%20I%20need%20support"
+       target="_blank">
+       WhatsApp Contact
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Official Portal — All Rights Reserved
+</footer>
 
 </body>
 </html>
