@@ -1,41 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Official Portal</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: radial-gradient(circle at top, #111, #000);
+  background: #000;
   color: #d4af37;
-  scroll-behavior: smooth;
-}
-
-/* NAVBAR */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.8);
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 15px;
-  z-index: 1000;
-}
-
-nav a {
-  color: #d4af37;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: white;
 }
 
 /* HERO */
@@ -46,15 +21,16 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: radial-gradient(circle at center, #111, #000);
 }
 
 .hero h1 {
   font-size: 3rem;
-  letter-spacing: 6px;
+  letter-spacing: 5px;
 }
 
 .hero p {
-  max-width: 600px;
+  max-width: 700px;
   opacity: 0.8;
 }
 
@@ -66,12 +42,29 @@ nav a:hover {
   color: #d4af37;
   text-decoration: none;
   transition: 0.3s;
-  border-radius: 6px;
 }
 
 .btn:hover {
   background: #d4af37;
   color: black;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+}
+
+nav a {
+  color: #d4af37;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 /* SECTIONS */
@@ -83,24 +76,17 @@ section {
 .card {
   max-width: 800px;
   margin: auto;
-  background: rgba(255,255,255,0.03);
   padding: 30px;
-  border-radius: 10px;
   border: 1px solid rgba(212,175,55,0.3);
+  background: rgba(255,255,255,0.03);
 }
 
-/* GLow */
-.glow {
-  position: fixed;
-  width: 500px;
-  height: 500px;
-  background: gold;
-  filter: blur(200px);
-  opacity: 0.1;
-  top: 40%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
+/* IMAGE */
+img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  opacity: 0.9;
 }
 
 /* FOOTER */
@@ -114,8 +100,6 @@ footer {
 
 <body>
 
-<div class="glow"></div>
-
 <!-- NAV -->
 <nav>
   <a href="#home">Home</a>
@@ -126,19 +110,19 @@ footer {
 </nav>
 
 <!-- HERO -->
-<section id="home" class="hero">
+<div class="hero" id="home">
   <h1>OFFICIAL PORTAL</h1>
-  <p>A cinematic digital experience of structure, symbolism, and modern identity.</p>
-  <a class="btn" href="#join">Enter</a>
-</section>
+  <p>A structured digital experience combining identity, design, and modern communication systems.</p>
+  <a class="btn" href="#join">Enter Portal</a>
+</div>
 
 <!-- ABOUT -->
 <section id="about">
   <div class="card">
     <h2>About</h2>
     <p>
-      This platform represents a structured digital identity system designed
-      for premium online presence, storytelling, and brand experience.
+      This platform is designed as a structured digital presence for communication,
+      branding, and user engagement in a premium format.
     </p>
   </div>
 </section>
@@ -148,9 +132,11 @@ footer {
   <div class="card">
     <h2>Mission</h2>
     <p>
-      To create a cinematic and immersive digital environment combining modern design,
-      storytelling, and interactive user experience.
+      To deliver a clean, modern, and cinematic web experience with strong identity,
+      clarity, and direct user interaction.
     </p>
+
+    <img src="https://images.unsplash.com/photo-1520975682031-a0c3f0a9b6e7" />
   </div>
 </section>
 
@@ -158,12 +144,12 @@ footer {
 <section id="join">
   <div class="card">
     <h2>Join Access</h2>
-    <p>Connect via WhatsApp to request access.</p>
+    <p>Click below to request access via WhatsApp.</p>
 
     <a class="btn"
-       href="https://wa.me/12139420224?text=Hello%20I%20want%20to%20join%20the%20platform"
+       href="https://wa.me/12139420224?text=Hello%20I%20want%20to%20join"
        target="_blank">
-       Request Access
+       Join Now
     </a>
   </div>
 </section>
@@ -172,10 +158,10 @@ footer {
 <section id="contact">
   <div class="card">
     <h2>Contact</h2>
-    <p>Direct communication channel available below.</p>
+    <p>Direct support channel available below.</p>
 
     <a class="btn"
-       href="https://wa.me/12139420224?text=Hello%20I%20need%20support"
+       href="https://wa.me/12139420224?text=Hello%20I%20need%20help"
        target="_blank">
        WhatsApp Contact
     </a>
@@ -183,7 +169,7 @@ footer {
 </section>
 
 <footer>
-  © 2026 Official Portal — All Rights Reserved
+  © 2026 Official Portal
 </footer>
 
 </body>
